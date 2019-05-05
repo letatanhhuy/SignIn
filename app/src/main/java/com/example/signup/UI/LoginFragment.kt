@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import com.example.signup.R
 import com.example.signup.Util.LoginValidation
+import com.example.signup.Util.SignUpHelper
 import kotlinx.android.synthetic.main.login_layout.*
 
 class LoginFragment:Fragment() {
@@ -20,7 +21,7 @@ class LoginFragment:Fragment() {
         super.onViewCreated(view, savedInstanceState)
         btnLogin.setOnClickListener {
             Log.d(TAG, "btnLogin onClick name:${txtName.text} pwd:${txtPwd.text}")
-            if (LoginValidation.validateLoginInfo(txtName.text.toString(), txtPwd.text.toString())) {
+            if (LoginValidation.validateLoginInfo(txtName.text.toString(), txtPwd.text.toString(), context)) {
                 val act = this.activity as MainActivity
                 act.changeFragment(MainContentFragment())
             } else {
@@ -29,6 +30,11 @@ class LoginFragment:Fragment() {
         }
         btnSignUp.setOnClickListener {
             Log.d(TAG, "btnSignUp onClick")
+            if (SignUpHelper.SignUp(txtName.text.toString(), txtPwd.text.toString(), context)) {
+                Toast.makeText(this.context, "SIGN IN INFO SAVED", Toast.LENGTH_LONG).show()
+            } else {
+                Toast.makeText(this.context, "INVALID SIGN IN INFO", Toast.LENGTH_LONG).show()
+            }
         }
     }
 

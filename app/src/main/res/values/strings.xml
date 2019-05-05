@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SignUp</string>
+    <string name="app_name">Sign In</string>
     <string name="name_input">Id</string>
     <string name="pwd_input">Password</string>
     <string name="login_button">Login</string>
