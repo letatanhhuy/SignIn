@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SignUp</string>
+    <string name="name_input">Id</string>
+    <string name="pwd_input">Password</string>
+    <string name="login_button">Login</string>
+    <string name="sign_up_button">Sign up</string>
+    <string name="forget_pwd_button">Forget Password?</string>
+    <string name="login_title">Welcome to my application</string>
+</resources>
