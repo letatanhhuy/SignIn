@@ -3,6 +3,8 @@ package com.example.signup.SharePreferences
 import android.content.Context
 import android.content.SharedPreferences
 import android.preference.PreferenceManager
+import android.util.Log
+
 
 object SharedPreferenceHelper {
     private const val SIGNED_IN = "signed_in"

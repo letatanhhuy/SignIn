@@ -7,10 +7,8 @@ import com.example.signup.SharePreferences.SharedPreferenceHelper
 object LoginValidation {
     fun validateLoginInfo(name: String, pwd: String, context: Context?):Boolean {
         var retVal = false
-        Log.d(TAG, "validateLoginInfo name:$name password:$pwd")
         if (context != null && validateName(name) && validatePassword(pwd)) {
             var getLogInInfo = SharedPreferenceHelper.getSignedInInfo(context)
-            Log.d(TAG, "saved name:${getLogInInfo.name} password:${getLogInInfo.password}")
             retVal = name == getLogInInfo.name && pwd == getLogInInfo.password
         }
         return retVal

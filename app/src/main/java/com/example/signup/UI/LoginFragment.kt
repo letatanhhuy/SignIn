@@ -30,7 +30,7 @@ class LoginFragment:Fragment() {
         }
         btnSignUp.setOnClickListener {
             Log.d(TAG, "btnSignUp onClick")
-            if (SignUpHelper.SignUp(txtName.text.toString(), txtPwd.text.toString(), context)) {
+            if (SignUpHelper.signUp(txtName.text.toString(), txtPwd.text.toString(), context)) {
                 Toast.makeText(this.context, "SIGN IN INFO SAVED", Toast.LENGTH_LONG).show()
             } else {
                 Toast.makeText(this.context, "INVALID SIGN IN INFO", Toast.LENGTH_LONG).show()
